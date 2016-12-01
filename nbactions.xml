@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-run first project</actionName>
+            <displayName>Run first project</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>test</goal>
+                <goal>-Denv=firstProfile</goal>
+                <goal>-DsuiteXmlFile=src\test\java\testSuites\methodTest.xml</goal>
+                <goal>-Dmaven.test.failure.ignore=false</goal>
+            </goals>
+        </action>
+    </actions>
+    
+    
