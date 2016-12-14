@@ -14,7 +14,7 @@
         
     <action>
         <actionName>CUSTOM-testDependency</actionName>
-        <displayName>testDependency</displayName>
+        <displayName>Test dependency</displayName>
         <goals>
             <goal>clean</goal>
             <goal>test</goal>
@@ -23,6 +23,18 @@
             <goal>-Dmaven.test.failure.ignore=false</goal>
         </goals>
     </action>
+    
+    <action>
+            <actionName>CUSTOM-page objec pattern</actionName>
+            <displayName>Page object pattern</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>test</goal>
+                <goal>-Denv=secondProfile</goal>
+                <goal>-DsuiteXmlFile=src\test\java\testSuites\pageObjectPattern.xml</goal>
+                <goal>-Dmaven.test.failure.ignore=false</goal>
+            </goals>
+        </action>
 </actions>
     
     

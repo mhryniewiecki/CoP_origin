@@ -11,6 +11,9 @@ public class InitializationData {
     @BeforeSuite(alwaysRun = true)
     public static void beforeSuite() throws Exception {
         System.out.println("@BeforeSuite");
+        //initialization external files
         ConfigFile.init();
+        //init webdriver
+        System.setProperty("webdriver.chrome.driver", ConfigFile.get("pathChromeDriver"));      
     }
 }

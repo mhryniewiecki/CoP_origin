@@ -46,9 +46,35 @@
                 <filename>file1.properties</filename>
             </properties>
         </profile>
+        
+        <profile>
+            <id>methodIdPom2</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>secondProfile</value>
+                </property>
+            </activation>
+            <properties>
+                <filename>file2.properties</filename>
+            </properties>
+        </profile>
     </profiles>
     
     <dependencies>
+        <!--Selenium chrome-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>2.53.1</version>
+            <type>jar</type>
+        </dependency>
+        <!--testNG-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>

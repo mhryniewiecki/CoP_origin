@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="michal_hryniewiecki_Origin_jar_1.0-SNAPSHOT">
+    <test name="testSuites suite">        
+        <groups>
+            <run>
+                <include name="UI" />
+                <include name="sanityTestUI" />
+            </run>
+            <dependencies>
+                <group name="UI" depends-on="hsanityTestUI" />
+            </dependencies>
+        </groups>
+
+        <classes>
+            <class name="common.dataService.InitializationData" />
+            <class name="testCases.pageObjectPattern.testsScenario.SanityTests" />
+            <class name="common.dataService.CloseData" />
+        </classes>
+    </test>
+</suite>
