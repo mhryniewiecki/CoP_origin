@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="michal_hryniewiecki_Origin_jar_1.0-SNAPSHOT">
+    <test name="testSuites suite">
+        <groups>
+            <run>
+                <include name="groupA" />
+                <include name="groupB" />
+                <include name="groupC" />
+                <include name="groupD" />
+            </run>
+            <dependencies>
+                <group name="groupC" depends-on="groupB" />
+            </dependencies>
+        </groups>
+        
+        <classes>
+            <class name="common.dataService.InitializationData" />
+            <class name="testCases.testDependency.Annotation" />
+            <class name="testCases.testDependency.Groups" />
+            <class name="testCases.testDependency.TestsDependencies" />
+        </classes>
+    </test>
+</suite>
